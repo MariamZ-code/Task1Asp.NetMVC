@@ -1,0 +1,33 @@
+﻿@model List<Guest>
+@{
+    ViewData["Title"] = "GuestList";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">email</th>
+            <th scope="col">phone</th>
+            <th scope="col">massege</th>
+            <th scope="col">willAttend</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var gst in Model)
+        {
+            <tr>
+                <td>@gst.Id</td>
+                <td>@gst.Name</td>
+                <td>@gst.Email</td>
+                <td>@gst.Phone</td>
+                <td>@gst.Attend</td>
+                <td>@gst.Msg</td>
+
+
+            </tr>
+        }
+    </tbody>
